@@ -1,0 +1,20 @@
+[
+  {
+    "userName": "Aditya Gupta",
+    "userEmail": "aditya@gmail.com",
+    "userAge": "22",
+    "userUniqueId": "1"
+  },
+  {
+    "userName": "uttam jaiswal",
+    "userEmail": "uttam@gmail.com",
+    "userAge": "23",
+    "userUniqueId": "2"
+  },
+  {
+    "userName": "noob",
+    "userEmail": "noob@gmail.com",
+    "userAge": "24",
+    "userUniqueId": "3"
+  }
+]
