@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+    <div class="main">
+        <h1>User management System</h1>
+        <table class="user">
+            <tr>
+                <th>User Id</th>
+                <th>User Name</th>
+                <th>User Email</th>
+                <th>Age</th>
+                <th>Delete</th>
+            </tr>
+            <%data.forEach(element=>{ %>
+            <tr>
+                <td> <%=element.userUniqueId %></td>
+                <td> <%=element.userName %></td>
+                <td> <%=element.userEmail %></td>
+                <td> <%=element.userAge %></td>
+                <td>
+                    <form action="/delete" method="post">
+                        <input type="text" name="userUniqueId" value="<%=element.userUniqueId %>">
+                        <button type="submit">delete</button>
+
+                    </form>
+                </td>
+            </tr>
+            <%}) %>
+        </table>
+        <div class="addUser">
+            <h2>Add User</h2>
+            <form action="/" method="post">
+                <input type="text" placeholder="User Unique Id" name="userUniqueId">
+                <input type="text" placeholder="User Name" name="userName">
+                <input type="text" placeholder="User Email" name="userEmail">
+                <input type="text" placeholder="User Age" name="userAge">
+                <button type="submit">Submit</button>
+
+            </form>
+        </div>
+        <div class="updateUser">
+            <h2>Update User</h2>
+            <form action="update" method="post">
+                <input type="text" placeholder="User Unique Id" name="userUniqueId">
+                <input type="text" placeholder="User Name" name="userName">
+                <input type="text" placeholder="User Email" name="userEmail">
+                <input type="text" placeholder="User Age" name="userAge">
+                <button type="submit">Submit</button>
+
+
+        </div>
+
+    </div>
+
+    
+</body>
+</html>
